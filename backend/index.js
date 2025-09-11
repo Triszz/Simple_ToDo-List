@@ -11,7 +11,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://playful-paprenjak-afda2c.netlify.app/",
+      "https://playful-paprenjak-afda2c.netlify.app",
     ],
     credentials: true,
   })
