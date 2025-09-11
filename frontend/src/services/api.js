@@ -3,8 +3,8 @@ import axios from "axios";
 // Base URL of backend
 const API_BASE_URL =
   process.env.NODE_ENV === "production"
-    ? "https://backend-production-cdad.up.railway.app/"
-    : "http://localhost:3000";
+    ? "https://backend-production-cdad.up.railway.app/api"
+    : "http://localhost:3000/api";
 
 // Create axios instance
 const api = axios.create({
