@@ -50,6 +50,8 @@ Todo-list/
 │   └── package.json
 ├── frontend/                   # React frontend application
 │   ├── src/
+│   │   ├── assets/           # Image resources,...
+│   │   │   └── img/        
 │   │   ├── components/       # React components
 │   │   ├── services/
 │   │   │   └── api.js        # Axios configuration
