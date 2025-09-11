@@ -7,7 +7,15 @@ const app = express();
 const taskRoute = require("./routes/task.route.js");
 
 // middleware
-app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5173",
+      "https://playful-paprenjak-afda2c.netlify.app/",
+    ],
+    credentials: true,
+  })
+);
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
