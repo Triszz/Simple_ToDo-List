@@ -1,6 +1,6 @@
 # 📝 Todo List Full-Stack Application
 
-A modern **Todo List application** built with **React.js** frontend and **Node.js + Express.js** backend, designed to demonstrate API development, database integration, and full-stack deployment.
+A very simple **Todo List application** built with **React.js** frontend and **Node.js + Express.js** backend, designed to demonstrate API development, database integration, and full-stack deployment.
 
 ## 🚀 Live Demo: [https://tris-simple-todo-list.netlify.app](https://tris-simple-todo-list.netlify.app)
 
