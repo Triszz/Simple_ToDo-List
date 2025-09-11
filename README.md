@@ -39,21 +39,25 @@ This project demonstrates:
 
 ```
 Todo-list/
-├── frontend/                 # React frontend application
-│   ├── src/
-│   │   ├── components/      # React components
-│   │   ├── config/
-│   │   │   └── api.js       # Axios configuration
-│   │   ├── App.jsx          # Main App component
-│   │   └── main.jsx         # Entry point
-│   ├── public/
-│   │   └── _redirects       # Netlify routing
+├── backend/                     # Node.js backend API
+│   ├── controllers/             # Route controllers
+│   │   └── task.controller.js      
+│   ├── models/                 # Mongoose models
+│   │   └── task.model.js
+│   ├── routes/                 # API routes
+│   │   └── task.route.js
+│   ├── index.js                # Server entry point
 │   └── package.json
-├── backend/                  # Node.js backend API
-│   ├── controllers/         # Route controllers
-│   ├── models/             # Mongoose models
-│   ├── routes/             # API routes
-│   ├── index.js            # Server entry point
+├── frontend/                   # React frontend application
+│   ├── src/
+│   │   ├── components/       # React components
+│   │   ├── services/
+│   │   │   └── api.js        # Axios configuration
+│   │   ├── App.css          
+│   │   ├── App.jsx           # Main App component
+│   │   ├── index.css         
+│   │   └── main.jsx          # Entry point
+│   ├── public/   
 │   └── package.json
 └── README.md
 ```
@@ -67,7 +71,7 @@ Todo-list/
 
 ### 1. Clone Repository
 ```bash
-git clone https://github.com/your-username/todo-list.git
+git clone https://github.com/Triszz/Simple_ToDo-List.git
 cd todo-list
 ```
 
@@ -76,7 +80,7 @@ cd todo-list
 cd backend
 npm install
 
-# Create .env file
+# Create .env file with your MongoDB credentials
 echo "MONGODB_URI=your-mongodb-connection-string" > .env
 echo "NODE_ENV=development" >> .env
 echo "PORT=3000" >> .env
@@ -122,54 +126,6 @@ curl -X POST https://backend-production-cdad.up.railway.app/api/tasks \
   -d '{"content":"Learn React","completed":false}'
 ```
 
-## 🌍 Deployment
-
-### Frontend (Netlify)
-1. Connect GitHub repository to Netlify
-2. Set build command: `npm run build`
-3. Set publish directory: `dist`
-4. Add `_redirects` file for React Router support
-
-### Backend (Railway)
-1. Connect GitHub repository to Railway
-2. Set root directory: `backend`
-3. Add environment variables:
-   - `MONGODB_URI`
-   - `NODE_ENV=production`
-   - `PORT=3000`
-
-### Environment Variables
-
-**Backend (.env):**
-```env
-MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/todoapp
-NODE_ENV=development
-PORT=3000
-```
-
-**Frontend (.env):**
-```env
-REACT_APP_API_URL=http://localhost:3000/api
-```
-
-## 🔄 Development Workflow
-
-### Local Development
-```bash
-# Terminal 1 - Backend
-cd backend && npm run dev
-
-# Terminal 2 - Frontend  
-cd frontend && npm run dev
-```
-
-### Building for Production
-```bash
-# Frontend build
-cd frontend && npm run build
-
-# Backend is ready for production deployment
-```
 
 ## 🧪 Features
 
@@ -180,33 +136,6 @@ cd frontend && npm run build
 - **Persistent Storage** - MongoDB database
 - **Responsive Design** - Mobile-friendly UI
 - **Real-time Updates** - Instant UI feedback
-
-## 🐛 Troubleshooting
-
-### Common Issues
-
-**CORS Error:**
-```javascript
-// Ensure backend CORS is configured
-app.use(cors({
-  origin: ['http://localhost:5173', 'https://your-frontend-url.netlify.app']
-}));
-```
-
-**MongoDB Connection Failed:**
-```bash
-# Check environment variable
-echo $MONGODB_URI
-
-# Ensure MongoDB Atlas IP whitelist includes 0.0.0.0/0
-```
-
-**Build Errors:**
-```bash
-# Clear node_modules and reinstall
-rm -rf node_modules package-lock.json
-npm install
-```
 
 ## 📚 What I Learned
 
