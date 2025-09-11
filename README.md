@@ -165,7 +165,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 👨‍💻 Author
 
-**Your Name**
+**Trần Thanh Trí**
 - GitHub: [Triszz](https://github.com/Triszz)
 - LinkedIn: [Trí Trần Thanh](https://linkedin.com/in/trí-trần-thanh-199526363)
 
