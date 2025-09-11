@@ -72,7 +72,7 @@ Todo-list/
 ### 1. Clone Repository
 ```bash
 git clone https://github.com/Triszz/Simple_ToDo-List.git
-cd todo-list
+cd Todo-list
 ```
 
 ### 2. Backend Setup
