@@ -45,7 +45,7 @@ const updateTask = async (req, res) => {
     if (!mongoose.isValidObjectId(id)) {
       return res.status(400).json({ message: "Invalid task ID format" });
     }
-    const task = await Task.findByIdAndUpdate(id, req.body, { new: true });
+    const task = await Task.findByIdAndUpdate(id, req.body);
     if (!task) {
       return res.status(404).json({ message: "Task is not found!" });
     }
