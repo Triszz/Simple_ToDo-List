@@ -1,4 +1,5 @@
 const Task = require("../models/task.model.js");
+const mongoose = require("mongoose");
 
 // Find all task
 const getTasks = async (req, res) => {
@@ -14,9 +15,12 @@ const getTasks = async (req, res) => {
 const getTask = async (req, res) => {
   try {
     const { id } = req.params;
+    if (!mongoose.isValidObjectId(id)) {
+      return res.status(400).json({ message: "Invalid task ID format" });
+    }
     const task = await Task.findById(id);
     if (!task) {
-      return res.status(400).json({ message: "Task is not found!" });
+      return res.status(404).json({ message: "Task is not found!" });
     }
     res.status(200).json(task);
   } catch (error) {
@@ -28,7 +32,7 @@ const getTask = async (req, res) => {
 const createTask = async (req, res) => {
   try {
     const task = await Task.create(req.body);
-    res.status(200).json(task);
+    res.status(201).json(task);
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
@@ -38,9 +42,12 @@ const createTask = async (req, res) => {
 const updateTask = async (req, res) => {
   try {
     const { id } = req.params;
-    const task = await Task.findByIdAndUpdate(id, req.body);
+    if (!mongoose.isValidObjectId(id)) {
+      return res.status(400).json({ message: "Invalid task ID format" });
+    }
+    const task = await Task.findByIdAndUpdate(id, req.body, { new: true });
     if (!task) {
-      return res.status(400).json({ message: "Task is not found!" });
+      return res.status(404).json({ message: "Task is not found!" });
     }
     res.status(200).json(task);
   } catch (error) {
@@ -52,9 +59,12 @@ const updateTask = async (req, res) => {
 const deleteTask = async (req, res) => {
   try {
     const { id } = req.params;
+    if (!mongoose.isValidObjectId(id)) {
+      return res.status(400).json({ message: "Invalid task ID format" });
+    }
     const task = await Task.findByIdAndDelete(id);
     if (!task) {
-      return res.status(400).json({ message: "Task is not found!" });
+      return res.status(404).json({ message: "Task is not found!" });
     }
     res.status(200).json(task);
   } catch (error) {
