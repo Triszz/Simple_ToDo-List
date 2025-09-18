@@ -172,5 +172,3 @@ This project is open source and available under the [MIT License](LICENSE).
 - LinkedIn: [Trí Trần Thanh](https://linkedin.com/in/trí-trần-thanh-199526363)
 
 ***
-
-⭐ **If this project helped you learn full-stack development, please give it a star!**
