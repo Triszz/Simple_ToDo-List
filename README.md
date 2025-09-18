@@ -1,10 +1,10 @@
-# 📝 Todo List Full-Stack Application
+# Todo List Application
 
 A very simple **Todo List application** built with **React.js** frontend and **Node.js + Express.js** backend, designed to demonstrate API development, database integration, and full-stack deployment.
 
-## 🚀 Live Demo: [https://tris-simple-todo-list.netlify.app](https://tris-simple-todo-list.netlify.app)
+## Live Demo: [https://tris-simple-todo-list.netlify.app](https://tris-simple-todo-list.netlify.app)
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend
 - **React.js 19** - UI library
@@ -25,7 +25,7 @@ A very simple **Todo List application** built with **React.js** frontend and **N
 - **Backend:** Railway
 - **Database:** MongoDB Atlas
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 Todo-list/
@@ -54,7 +54,7 @@ Todo-list/
 └── README.md
 ```
 
-## ⚡ Quick Start
+## Quick Start
 
 ### Prerequisites
 - Node.js (v18 or higher)
@@ -94,7 +94,7 @@ npm run dev
 - Frontend: http://localhost:5173
 - Backend API: http://localhost:3000
 
-## 🔧 API Endpoints
+## API Endpoints
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
@@ -119,7 +119,7 @@ curl -X POST https://backend-production-cdad.up.railway.app/api/tasks \
 ```
 
 
-## 🧪 Features
+## Features
 
 - **Create Tasks** - Add new todo items
 - **Read Tasks** - View all tasks
@@ -129,7 +129,7 @@ curl -X POST https://backend-production-cdad.up.railway.app/api/tasks \
 - **Responsive Design** - Mobile-friendly UI
 - **Real-time Updates** - Instant UI feedback
 
-## 📚 What I Learned
+## What I Learned
 
 Through building this project, I gained hands-on experience with:
 
@@ -141,7 +141,7 @@ Through building this project, I gained hands-on experience with:
 - **Environment Management** - Configuration for different environments
 - **CORS** - Understanding cross-origin requests and security
 
-## 🤝 Contributing
+## Contributing
 
 This is a learning project, but suggestions are welcome!
 
@@ -151,11 +151,11 @@ This is a learning project, but suggestions are welcome!
 4. Push to branch (`git push origin feature/amazing-feature`)
 5. Open Pull Request
 
-## 📄 License
+## License
 
 This project is open source and available under the [MIT License](LICENSE).
 
-## 👨‍💻 Author
+## Author
 
 **Trần Thanh Trí**
 - GitHub: [Triszz](https://github.com/Triszz)
