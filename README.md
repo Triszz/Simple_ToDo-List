@@ -4,16 +4,6 @@ A very simple **Todo List application** built with **React.js** frontend and **N
 
 ## 🚀 Live Demo: [https://tris-simple-todo-list.netlify.app](https://tris-simple-todo-list.netlify.app)
 
-## 🎯 Learning Objectives
-
-This project demonstrates:
-- **RESTful API Development** with Node.js and Express.js
-- **MongoDB Integration** with Mongoose ODM
-- **React Frontend** with modern hooks and state management
-- **CORS Configuration** for cross-origin requests
-- **Environment Variables** management
-- **Full-Stack Deployment** (Netlify + Railway + MongoDB Atlas)
-
 ## 🛠️ Tech Stack
 
 ### Frontend
